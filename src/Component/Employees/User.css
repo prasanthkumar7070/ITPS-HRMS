@@ -1,0 +1,80 @@
+.tabs .active {
+    background-color: rgb(70, 158, 114) !important;
+    color: white;
+    clip-path: polygon(82% 32%, 100% 50%, 84% 73%, 6% 74%, 16% 53%, 6% 32%);
+    text-align: center;
+    transition: 0s !important;
+}
+
+* {
+    outline: none !important;
+}
+
+.tabs button:hover {
+    color: black;
+}
+
+.tabs button {
+    margin-left: 2rem;
+    position: relative;
+    text-align: left !important;
+    color: black;
+    font-weight: 500;
+    width: 180px;
+    padding-left: 38px !important;
+    font-size: 14px !important;
+    height: 140px;
+    transition: 0s !important;
+}
+
+.save-btn {
+    position: absolute;
+    right: 10.5rem;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+.selction {
+    width: 450px;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    margin-bottom: 10px !important;
+}
+
+.form input {
+    width: 450px;
+    border: none;
+    outline: none !important;
+    display: block;
+    border-bottom: 1px solid grey;
+    padding: 5px 0;
+    margin-bottom: 10px !important;
+}
+
+.form {
+    position: relative;
+    left: 50px;
+}
+
+.nav-pills {
+    --bs-nav-tabs-border-width: none !important;
+    margin-left: 65px;
+}
+
+.nav-pills .nav-link {
+    width: 200px;
+    color: black;
+    height: 130px;
+    transition: 0s;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: rgb(70, 158, 114) !important;
+    clip-path: polygon(82% 32%, 100% 50%, 84% 73%, 6% 74%, 16% 53%, 6% 32%) !important;
+    color: #ffff;
+}
