@@ -4,6 +4,10 @@ const EmployeesList = () => {
     const { users, setAddusers } = useContext(Store)
     console.log(users)
 
+
+    const delUsers = () => {
+        setAddusers()
+    }
     return (
         <div className='container'>
             <h2>Lists</h2>
@@ -17,10 +21,9 @@ const EmployeesList = () => {
                     <h5>Email:{user.email}<br /></h5>
                     <h5>Present Address:{user.address.street}<br /></h5>
                     <h5>Perminant Address:{user.perminant}<br /></h5>
-                    <h5>City:{user.address.city}<br /></h5>
-                    <h5>Pincode:{user.address.zipcode}<br /></h5>
+                    <h5>City:{user.city}<br /></h5>
+                    <h5>Pincode:{user.zipcode}<br /></h5>
                     <h5>Company:{user.company.name}<br /></h5>
-
                 </div>
             ))}
         </div>

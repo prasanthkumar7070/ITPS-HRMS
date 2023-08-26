@@ -12,9 +12,9 @@ const Step1 = () => {
 
         address: {
             street: "",
-            city: "",
-            zipcode: "",
         },
+        city: "",
+        zipcode: "",
         perminant: "",
         company: {
             name: ""
@@ -29,13 +29,13 @@ const Step1 = () => {
             name: "",
             fathername: "",
             email: "",
+
             address: {
                 street: "",
-                city: "",
-                zipcode: "",
             },
+            city: "",
+            zipcode: "",
             perminant: "",
-
             company: {
                 name: ""
             }
@@ -47,12 +47,12 @@ const Step1 = () => {
         if (formField === "address") {
             setData({ ...data, address: { street: value } })
         }
-        else if (formField === "address") {
-            setData({ ...data, address: { city: value } })
-        }
-        else if (formField === "address") {
-            setData({ ...data, address: { zipcode: value } })
-        }
+        // else if (formField === "address") {
+        //     setData({ ...data, address: { city: value } })
+        // }
+        // else if (formField === "address") {
+        //     setData({ ...data, address: { zipcode: value } })
+        // }
         else if (formField === "company") {
             setData({ ...data, company: { name: value } })
         } else {
@@ -68,6 +68,7 @@ const Step1 = () => {
     return (
         <div>
             <div className='row'>
+                <h3 className='mx-5'>Basic Details</h3>
                 <div className='col-md-6 col-sm-12'>
                     <form className='form' >
                         <label htmlFor='empNo'>Emp No<sup className='text-danger'>*</sup></label>
@@ -89,17 +90,17 @@ const Step1 = () => {
 
                 <div className='col-md-6 col-sm-12'>
                     <form className='form'>
-                        <label htmlFor='present'>Present Address<sup className='text-danger'>*</sup></label>
-                        <input type='text' className='mb-2' id="address" value={data.address.street} onChange={(e) => submitHandler("address", e.target.value)} aria-describedby="adress" />
+                        <label htmlFor='address'>Present Address<sup className='text-danger'>*</sup></label>
+                        <input type='text' className='mb-2' id="address" value={data.address.street} onChange={(e) => submitHandler("address", e.target.value)} aria-describedby="address" />
 
                         <label htmlFor='perminant'>Perminant Address<sup className='text-danger'>*</sup></label>
                         <input type='text' className='mb-2' id="perminant" value={data.perminant} onChange={(e) => submitHandler("perminant", e.target.value)} aria-describedby="perminant" />
 
                         <label htmlFor='city'>City<sup className='text-danger'>*</sup></label>
-                        <input type='text' className='mb-2' id="city" value={data.address.city} onChange={(e) => submitHandler("city", e.target.value)} aria-describedby="city" />
+                        <input type='text' className='mb-2' id="city" value={data.city} onChange={(e) => submitHandler("city", e.target.value)} aria-describedby="city" />
 
                         <label htmlFor='zipcode'>Pincode<sup className='text-danger'>*</sup></label>
-                        <input type='text' className='mb-2' id="zipcode" value={data.address.zipcode} onChange={(e) => submitHandler("address", e.target.value)} aria-describedby="zipcode" />
+                        <input type='text' className='mb-2' id="zipcode" value={data.zipcode} onChange={(e) => submitHandler("zipcode", e.target.value)} aria-describedby="zipcode" />
 
                         <label htmlFor='company'>Perminant Address<sup className='text-danger'>*</sup></label>
                         <input type='text' className='mb-2' id="company" value={data.company.name} onChange={(e) => submitHandler("company", e.target.value)} aria-describedby="company" />
